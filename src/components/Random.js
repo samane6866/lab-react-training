@@ -8,7 +8,7 @@ function GetRandomNumber(min, max) {
 
 function Random({ min, max }) {
   return (
-    <div>
+    <div style={{ border: '1px solid' }}>
       <p>
         el numero random entre {min}y {max}= {GetRandomNumber(min, max)}
       </p>

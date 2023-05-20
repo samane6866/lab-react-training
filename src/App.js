@@ -1,6 +1,7 @@
 import IdCard from './components/IdCard';
 import Greeting from './components/Greetings';
 import Random from './components/Random';
+import BoxColor from './components/BoxColor';
 import './App.css';
 
 function App() {
@@ -21,13 +22,14 @@ function App() {
         birth={new Date('1988-05-11')}
       />
       <IdCard
-        firstname="Delores"
+        firstname="Dolores"
         LastName="obrien"
         Gender="female"
         Height={165}
         birth={new Date('1988-05-11')}
       />
-      <Random />
+      <BoxColor r={255} g={0} b={0} />
+      <BoxColor />
     </div>
   );
 }
