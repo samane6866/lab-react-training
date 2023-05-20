@@ -5,7 +5,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Greeting />
+      <Greeting lang="de">Leduwing</Greeting>
+      <Greeting lang="fr">Francios</Greeting>
+      <Greeting lang="es">Marcos</Greeting>
+      <Greeting lang="en">Moon</Greeting>
+
       <IdCard
         firstname="joe"
         LastName="Doe"
