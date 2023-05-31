@@ -9,19 +9,21 @@ function CreditCard({
   bank,
   owner,
   bgColor,
-  Color,
+  color,
 }) {
   return (
-    <div className="card" style={{ backgroundColor: '#eeeeee' }}>
+    <div className="card" style={{ backgroundColor: bgColor }}>
       <div className="logo--container">
         <img className="card--logo" />
       </div>
-      <div className="card--numbers">1234567789</div>
-      <div className="card--expiration">
-        <span>expire</span>
-        <span style={{ marginLeft: '1rem' }}>N26</span>
+      <div className="card--numbers" style={{ color: color }}>
+        **** **** **** {number.substring(12)}
       </div>
-      <div>owneer</div>
+      <div className="card--expiration">
+        <span style={{ color: color }}>{expirationMonth}</span>
+        <span style={{ marginLeft: '1rem', color: color }}>{bank}</span>
+      </div>
+      <div style={{ color: color }}>{owner}</div>
     </div>
   );
 }

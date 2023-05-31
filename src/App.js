@@ -4,10 +4,15 @@ import Random from './components/Random';
 import BoxColor from './components/BoxColor';
 import './App.css';
 import CreditCard from './components/CreditCard';
+import LikeButton from './components/LikeButton';
+import FaceBook from './components/FaceBook';
 
 function App() {
   return (
     <div className="App">
+      <FaceBook />
+      <LikeButton />
+      <LikeButton />
       <Greeting lang="de">Leduwing</Greeting>
       <Greeting lang="fr">Francios</Greeting>
       <Greeting lang="es">Marcos</Greeting>
@@ -51,6 +56,26 @@ function App() {
         bank="BNP"
         owner="Maxence Bouret"
         bgColor="#11aa99"
+        color="white"
+      />
+      <CreditCard
+        type="Master Card"
+        number={'0123456789010995'}
+        expirationMonth={3}
+        expirationYear={2021}
+        bank="N26"
+        owner="Maziya Bouret"
+        bgColor="#eeeeee"
+        color="#222222"
+      />
+      <CreditCard
+        type="Visa"
+        number={'0123456789016984'}
+        expirationMonth={3}
+        expirationYear={2021}
+        bank="BVVA"
+        owner="Sara Bouret"
+        bgColor="#ddbb55"
         color="white"
       />
     </div>
