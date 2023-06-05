@@ -9,6 +9,17 @@ import { useState } from 'react';
 function FaceBook() {
   const [selectedCountry, setSelectedCountry] = useState(null);
 
+  //cuando hago click en pic tiene que darme el nombre,...etc.
+
+  const [pictureInfo, setPictureInfo] = useState(true);
+
+  function handlePictureClick() {
+    setPictureInfo();
+  }
+  function handelClosePic() {
+    setPictureInfo(!pictureInfo)
+  }
+
   const facebook = profiles.filter(
     (p) => (
       p.firstName,
@@ -23,26 +34,35 @@ function FaceBook() {
     <div
       key={key}
       style={{
-        backgroundColor: selectedCountry === person.country ? 'blue' : ' ',
+        backgroundColor: selectedCountry === person.country ? 'Lightblue' : ' ',
 
         flexDirection: 'row',
         border: '2px solid green',
         margin: '8px',
-        width: '650px',
       }}
     >
       {' '}
-      <li style={{ display: 'flex', flexDirection: 'column', padding: '8px' }}>
+      <li
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          padding: '8px',
+        }}
+      >
         <img
+          onClick={() => handlePictureClick()|| handelClosePic()}
           style={{ width: '250px' }}
           src={person.img}
           alt={person.firstName}
         />
-        <p>
+        {/* <button onClick={() => handelClosePic()}></button> */}
+
+        <div style={{ display: pictureInfo ? 'none' : 'block' }}>
           <b> firstName: {person.firstName + ' '}</b>
-        </p>
-        <b> lastName: {person.lastName + ' '}</b>
-        <b>country:{person.country}</b>
+
+          <b> lastName: {person.lastName + ' '}</b>
+          <b>country:{person.country}</b>
+        </div>
       </li>
     </div>
   ));
@@ -57,6 +77,8 @@ function FaceBook() {
   const newButton = result.map((p) => (
     <button
       style={{
+        padding: '10px',
+        margin: '5px',
         backgroundColor: selectedCountry === p ? 'blue' : '',
       }}
       onClick={() => handleCountryClick(p)}

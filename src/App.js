@@ -6,10 +6,14 @@ import './App.css';
 import CreditCard from './components/CreditCard';
 import LikeButton from './components/LikeButton';
 import FaceBook from './components/FaceBook';
+import NumberTab from './components/NumberTab';
+
 
 function App() {
   return (
     <div className="App">
+      <NumberTab limit={36} />
+      
       <FaceBook />
       <LikeButton />
       <LikeButton />
