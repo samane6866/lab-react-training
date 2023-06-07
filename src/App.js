@@ -7,11 +7,17 @@ import CreditCard from './components/CreditCard';
 import LikeButton from './components/LikeButton';
 import FaceBook from './components/FaceBook';
 import NumberTab from './components/NumberTab';
+import RGBcolorPicker from './components/RGBcolorPicker';
+import SingleColorPicker from './components/SingleColorPicker';
 
 
 function App() {
   return (
     <div className="App">
+
+
+      <RGBcolorPicker />
+      
       <NumberTab limit={36} />
       
       <FaceBook />
